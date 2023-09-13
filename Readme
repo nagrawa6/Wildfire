@@ -8,12 +8,13 @@ Wildfires pose severe health and ecological consequences. In 2021 alone, 58,968 
 
 - USDA data for 2060 wildfire occurrences over 20 years, representing 35 million acres burned.
 - NASA MODIS remote sensing data consisting of 1.3 billion satellite observations.
+- Copernicus ERA5 reanalysis data.
 
 ## Methodology
 
-1. **Feature Selection**: Six key environmental variables were identified, and annual averages over three years leading up to each wildfire occurrence were computed.
+1. **Feature Selection**: Six key environmental variables were identified, and annual averages over three years leading up to each wildfire occurrence were computed. Addititionally, five key atmospheric variables were identified and were sampled from four pressure levels.
 
-2. **Model Selection**: The resulting dataset of 18 environmental variables was tested on six different machine learning classification models (Logistic Regression, Decision Tree, Random Forest, XGBoost, KNN, and SVM) to determine their accuracy in predicting large wildfires.
+2. **Model Selection**: The resulting dataset of environmental variables was tested on six different machine learning classification models (Logistic Regression, Decision Tree, Random Forest, XGBoost, KNN, and SVM) to determine their accuracy in predicting large wildfires.
 
 3. **Model Performance**: The XGBoost Classification model performed the best in predicting large wildfires, with an accuracy of 90.44%.
 
