@@ -50,7 +50,7 @@ The input data was split into 10 subsets of data (also known as folds). The mode
 ## Steps:
 Software: Python version 3.9.13 on Jupyter Notebooks.
 
-## Data:
+### Data:
 1. Download the NASA MODIS Data files from https://zenodo.org/record/8044802
 2. Use ModisDownload.ipynb to consolidate the USDA and NASA MODIS data
    
@@ -66,7 +66,7 @@ Taking the input data file wildfire_classes2.csv, run the six models (using the 
 5. KNN: KNN Classification.ipynb
 6. SVM: SVM Classification.ipynb
 
-## Environmental Justice Analysis: 
+### Environmental Justice Analysis: 
 To perform the data analysis run the following: Points Map Large Fires from 2018.ipynb
 
 ## Results
