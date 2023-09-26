@@ -16,7 +16,6 @@ from pathlib import Path
 
 def get_top_fires(nfires):
     conn = sqlite3.connect('data/FPA_FOD_20221014.sqlite')
-    #in lieu of dataframe manipulation in the next code block:
     df = pd.read_sql_query("""SELECT *
                        FROM Fires""", conn)
     
