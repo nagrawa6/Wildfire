@@ -12,16 +12,10 @@ from pathlib import Path
 
 #USE conda install -c conda-forge pyshp
 #import shapefile
-#https://www.kaggle.com/code/mehmetcandemir/us-wildfire-analysis-eda-and-answers/data
 #If not already installed - use conda install -c conda-forge sqlite
-#https://towardsdatascience.com/creating-an-interactive-map-of-wildfire-data-using-folium-in-python-7d6373b6334a
-#https://www.sciencebase.gov/catalog/item/5ee13de982ce3bd58d7be7e7 Data for Wildfiresg 
-######https://www.kaggle.com/code/littlecorrie/starter-1-88-million-us-wildfires-26ea598f-d
 
-
-########https://www.kaggle.com/datasets/rtatman/188-million-us-wildfires/code?datasetId=2478&searchQuery=Wildfires
 def get_top_fires(nfires):
-    conn = sqlite3.connect('data/FPA_FOD_20170508.sqlite')
+    conn = sqlite3.connect('data/FPA_FOD_20221014.sqlite')
     #in lieu of dataframe manipulation in the next code block:
     df = pd.read_sql_query("""SELECT *
                        FROM Fires""", conn)
@@ -40,7 +34,7 @@ def get_top_fires(nfires):
 
 def plot_fires():
     #Get the connection object
-    conn = sqlite3.connect('data/FPA_FOD_20170508.sqlite')
+    conn = sqlite3.connect('data/FPA_FOD_20221014.sqlite')
     wildfires = pd.read_sql_query('SELECT FIRE_YEAR, DISCOVERY_DATE, FIRE_SIZE, STAT_CAUSE_DESCR FROM Fires;', con=conn)
     fig, ax = plt.subplots(figsize=(12,6))
     ax.hist(wildfires['FIRE_YEAR'], rwidth=0.9, bins=24);
