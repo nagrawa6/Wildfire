@@ -14,8 +14,16 @@ from pathlib import Path
 #import shapefile
 #If not already installed - use conda install -c conda-forge sqlite
 
+from io import BytesIO
+from urllib.request import urlopen
+from zipfile import ZipFile
+zipurl = 'https://www.fs.usda.gov/rds/archive/products/RDS-2013-0009.6/RDS-2013-0009.6_Data_Format4_SQLITE.zip'
+with urlopen(zipurl) as zipresp:
+    with ZipFile(BytesIO(zipresp.read())) as zfile:
+        zfile.extractall()
+
 def get_top_fires(nfires):
-    conn = sqlite3.connect('data/FPA_FOD_20221014.sqlite')
+    conn = sqlite3.connect('./Data/FPA_FOD_20221014.sqlite')
     df = pd.read_sql_query("""SELECT *
                        FROM Fires""", conn)
     
