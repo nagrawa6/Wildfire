@@ -76,5 +76,5 @@ To perform the data analysis run the following: Environmental Justice.ipynb
 
 ## Results
 The XGBoost Classification model achieved a remarkable accuracy of 90.44% in predicting large wildfires.
-The environmental variable LST Night from 1 year before average and the atmospher-ic variable geopotential at 850 hPa were determined to be the most significant for the XGBoost Classification model.
+The environmental variable LST Night from 1 year before average and the atmospheric variable geopotential at 850 hPa were determined to be the most significant for the XGBoost Classification model.
 This model can be used by wildfire safety organizations to predict large wildfire occurrences with high accuracy and employ protective safeguards to prioritize resource allocation for socioeconomically disadvantaged communities.
